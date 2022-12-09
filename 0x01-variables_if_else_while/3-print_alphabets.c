@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
  * main - print letters in lowercase then in uppercase
+Desription: using the main function
  * Return 0: on success
  */
 int main(void)
