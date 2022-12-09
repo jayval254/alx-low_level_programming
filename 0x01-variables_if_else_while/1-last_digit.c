@@ -1,13 +1,14 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/*main - determine if a number is greater or less than 5, or is zero
+/**
+ * main - determine if a number is greater or less than 5, or is zero
  * Return: 0 if success
  */
 int main(void)
-
 {
 	int n;
+
 	char last[] = "Last digit of";
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
