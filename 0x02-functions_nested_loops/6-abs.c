@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _abs - return absolute value of an integer
- * @n - parameter
+ * @a - parameter
  * Return: always 0 on success
  */
 int _abs(int a)
