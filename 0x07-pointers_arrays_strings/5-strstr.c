@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * _strstr - function that locates a substring
  * @haystack: a string to search within
@@ -9,20 +8,19 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *s1 = needle, *s2 = haystack;
-
 	while (*haystack)
 	{
-		s1 = needle;
-		s2 = haystack;
-		while (*haystack == *needle)
+		char *s1 = haystack;
+		char *s2 = needle;
+
+		while (*haystack && *s2 && *haystack == *s2)
 		{
 			haystack++;
-			needle++;
+			s2++;
 		}
-		if (*needle == '\0')
-			return (haystack);
-		haystack = s2 + 1;
+		if (!*s2)
+			return (s1);
+		haystack = s1 + 1;
 	}
-	return (NULL);
+	return (0);
 }
