@@ -13,16 +13,27 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *ptr;
-	unsigned int a, b;
+	char *arr;
+	int x, y, z;
 
-	ptr = malloc((a + (n * sizeof(*s2) + 1) * sizeof(*ptr)));
-	if (ptr == NULL)
+	z = 0;
+	arr = malloc(sizeof(*s1 + *s2));
+	if (arr == NULL)
 		return (NULL);
-	for (a = 0; s1[a] != '\0'; a++)
-		ptr[a] = s1[a];
-	for (b = 0; s2[b] != '\0' && b < n; b++, a++)
-		ptr[a] = s2[b];
-	ptr[a] = '\0';
-	return (ptr);
+	y = 0;
+	while (s1[y] != '\0')
+	{
+		arr[z] = s1[y];
+		y++;
+		z++;
+	}
+	x = 0;
+	while (s2[x] != '\0')
+	{
+		arr[z] = s2[x];
+		x++;
+		z++;
+	}
+	return (arr);
+	free(arr);
 }
